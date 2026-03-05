@@ -1,0 +1,238 @@
+{
+  "info": {
+    "_postman_id": "47ad9bfc-7283-4215-a096-0018baaa72a5",
+    "name": "SAP Cloud Integration",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Http Ping",
+      "id": "6e46b982-d9d5-4f99-a10d-5cd3d51b0810",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "{{client_secret}}",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "{{client_id}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{tenant_url}}.hana.ondemand.com/http/http_ping",
+          "protocol": "https",
+          "host": [
+            "{{tenant_url}}",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "http",
+            "http_ping"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Call iFlow with oAuth",
+      "id": "9c16c126-acd5-47f7-922d-a5fd98cfd41b",
+      "request": {
+        "auth": {
+          "type": "oauth2",
+          "oauth2": [
+            {
+              "key": "clientSecret",
+              "value": "4075a81a-8b77-4d72-bacc-42ad97b0f711$rQsj0bLKOFkfyzC6gHN3WtSRLwsmjLk6qazAZqFRtss=",
+              "type": "string"
+            },
+            {
+              "key": "clientId",
+              "value": "sb-82712571-5d46-4a04-8c2f-5cd17306658c!b602523|it-rt-f8e6fe52trial!b26655",
+              "type": "string"
+            },
+            {
+              "key": "accessTokenUrl",
+              "value": "https://f8e6fe52trial.authentication.us10.hana.ondemand.com/oauth/token",
+              "type": "string"
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "string"
+            },
+            {
+              "key": "tokenName",
+              "value": "ci_new_token",
+              "type": "string"
+            },
+            {
+              "key": "client_authentication",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "addTokenTo",
+              "value": "header",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{tenant_url}}.hana.ondemand.com/http/call_iflow_with_oauth",
+          "protocol": "https",
+          "host": [
+            "{{tenant_url}}",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "http",
+            "call_iflow_with_oauth"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Call iFlow with client ID secret",
+      "id": "0dfea2ba-79e4-49cc-9875-7cdab5ee8344",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "{{client_secret}}",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "{{client_id}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{tenant_url}}.hana.ondemand.com/http/call_iflow_with_clientid_secret",
+          "protocol": "https",
+          "host": [
+            "{{tenant_url}}",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "http",
+            "call_iflow_with_clientid_secret"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Call iFlow with basic IAS user",
+      "id": "88a11b78-b0e3-40b4-8649-268de1481145",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{username}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{password}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{tenant_url}}.hana.ondemand.com/http/call_iflow_with_ias_user",
+          "protocol": "https",
+          "host": [
+            "{{tenant_url}}",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "http",
+            "call_iflow_with_ias_user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Call iFlow with SAP certificate",
+      "id": "7b6b3542-d46c-4091-91e9-87dcba9462e9",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{tenant_url}}.hana.ondemand.com/http/call_iflow_with_sap_cert",
+          "protocol": "https",
+          "host": [
+            "{{tenant_url}}",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "http",
+            "call_iflow_with_sap_cert"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Call iFlow with external certificate",
+      "id": "e8067184-65d1-4fe2-93ba-7e0f099f5052",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{tenant_url}}.hana.ondemand.com/http/call_iflow_with_ext_cert",
+          "protocol": "https",
+          "host": [
+            "{{tenant_url}}",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "http",
+            "call_iflow_with_ext_cert"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
